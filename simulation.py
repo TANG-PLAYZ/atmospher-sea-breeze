@@ -72,12 +72,7 @@ for i in range(times):
     dQo = round(Sr*(1-a)*Ao-Ao*e*T10**4+Ao*e*T00**4-ho*(T10-T00)*Ao,4)*t#計算水域熱量變化(以初始溫度時為零)
     T00=round(((T10**4)/2+ho*(T10-T00)/e/2-h*(T00-T02)/e/2+(T02**4)/2)**0.25,4)#以熱量平恆計算水域上方大氣溫度
     
-    T10+= round(dQo/Mo/Co,4) #以熱量變化計算水域溫度變化
-    #dQoa+=round(e*Ao*(T10**4)+ho*Ao*(T10-T0)-2*e*Ao*T00**4,2)
-    #T00+=round(dQoa/1e9/1.184/Co,2)
-    
-
-    
+    T10+= round(dQo/Mo/Co,4) #以熱量變化計算水域溫度變化    
     
     dQl = round(Sr*(1-a)*Al-Al*e*T11**4+Al*e*T01**4-hl*(T11-T01)*Al,4)*t#計算陸地熱量變化(以初始溫度時為零)
     
